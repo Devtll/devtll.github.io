@@ -251,6 +251,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/02/multi-deploy/" itemprop="url">
+                  将Hexo博客同时托管到Github和Coding
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T16:34:26+08:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/02/multi-deploy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/02/multi-deploy/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>之前只是将博客托管在<code>Github</code>上，但是天朝访问<code>GitHub Pages</code>真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用<code>GitCafe</code>来托管<code>(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )</code>，因为<code>Hexo</code>支持多部署，所以可以将博客同时托管到 <code>Github</code> 和 <code>Coding</code> 上，国内线路解析到 <code>Coding</code>，国外线路解析到 <code>Github</code></p>
+<hr>
+<h2 id="配置-Coding"><a href="#配置-Coding" class="headerlink" title="配置 Coding"></a>配置 Coding</h2><p>注册好<code>Coding</code>帐号后，需要配置下<code>SSH</code>公钥。因为之前使用<code>Github</code>已经将<code>SSH Key</code>生成了，可以直接拿来用。先进入文件目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>将<code>id_rsa.pub</code>里的内容全部复制并添加到你<code>Coding</code>帐号下的<code>SSH</code>公钥这个选项里，继续使用下面的命令来测试是否添加成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@git.coding.net</span><br></pre></td></tr></table></figure>
+<p>如果显示 <code>Hello xxx You&#39;ve connected to Coding.net by SSH successfully!</code> 则表示配置成功</p>
+<hr>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/05/02/multi-deploy/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/13/before-writing/" itemprop="url">
                   开写之前
                 </a>
@@ -411,7 +539,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -419,7 +547,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -428,7 +556,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
