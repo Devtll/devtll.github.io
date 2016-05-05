@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://devtll.github.io/"/>
-  <updated>2016-05-02T10:55:17.000Z</updated>
+  <updated>2016-05-05T14:40:23.000Z</updated>
   <id>http://devtll.github.io/</id>
   
   <author>
@@ -20,39 +20,39 @@
     <link href="http://devtll.github.io/2016/05/02/multi-deploy/"/>
     <id>http://devtll.github.io/2016/05/02/multi-deploy/</id>
     <published>2016-05-02T08:34:26.000Z</published>
-    <updated>2016-05-02T10:55:17.000Z</updated>
+    <updated>2016-05-05T14:40:23.000Z</updated>
     
-    <content type="html">&lt;p&gt;之前只是将博客托管在&lt;code&gt;Github&lt;/code&gt;上，但是天朝访问&lt;code&gt;GitHub Pages&lt;/code&gt;真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用&lt;code&gt;GitCafe&lt;/code&gt;来托管&lt;code&gt;(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )&lt;/code&gt;，因为&lt;code&gt;Hexo&lt;/code&gt;支持多部署，所以可以将博客同时托管到 &lt;code&gt;Github&lt;/code&gt; 和 &lt;code&gt;Coding&lt;/code&gt; 上，国内线路解析到 &lt;code&gt;Coding&lt;/code&gt;，国外线路解析到 &lt;code&gt;Github&lt;/code&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管&lt;code&gt;(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )&lt;/code&gt;，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好&lt;code&gt;Coding&lt;/code&gt;帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用&lt;code&gt;Github&lt;/code&gt;已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
+&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用Github已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你&lt;code&gt;Coding&lt;/code&gt;帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你Coding帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh -T git@git.coding.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果显示 &lt;code&gt;Hello xxx You&amp;#39;ve connected to Coding.net by SSH successfully!&lt;/code&gt; 则表示配置成功&lt;/p&gt;
 &lt;hr&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;创建项目和配置&quot;&gt;&lt;a href=&quot;#创建项目和配置&quot; class=&quot;headerlink&quot; title=&quot;创建项目和配置&quot;&gt;&lt;/a&gt;创建项目和配置&lt;/h2&gt;&lt;p&gt;创建项目时唯一要注意的就是项目名称一定要和你的用户名一样并且项目选择公开，创建成功后接下来就要修改博客根目录下面的&lt;code&gt;_config.yml&lt;/code&gt; 文件。下面是我的配置&lt;/p&gt;
 &lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Deployment&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;## Docs: https://hexo.io/docs/deployment.html&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;deploy:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  type:&lt;/span&gt; git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  branch:&lt;/span&gt; master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;  repository:&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    github:&lt;/span&gt; git@github.com:Devtll/devtll.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;    coding:&lt;/span&gt; git@git.coding.net:dev_tll/dev_tll.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;最后使用命令把博客同步到&lt;code&gt;Coding&lt;/code&gt;上面：&lt;/p&gt;
+&lt;p&gt;最后使用命令把博客同步到Coding上面：&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean;hexo g;hexo d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;hr&gt;
 &lt;h2 id=&quot;开启Coding-Pages服务&quot;&gt;&lt;a href=&quot;#开启Coding-Pages服务&quot; class=&quot;headerlink&quot; title=&quot;开启Coding Pages服务&quot;&gt;&lt;/a&gt;开启Coding Pages服务&lt;/h2&gt;&lt;p&gt;部署博客方式有两种，第一种就是&lt;code&gt;Pages&lt;/code&gt;服务的方式，也推荐这种方式，因为可以绑定域名，而第二种演示的方式必须升级会员才能绑定自定义域名。&lt;code&gt;Pages&lt;/code&gt;方式也很简单&lt;br&gt;就是在博客根目录source/需要创建一个空白文件，至于原因，是因为 coding.net需要这个文件来作为以静态文件部署的标志。就是说看到这个&lt;code&gt;Staticfile&lt;/code&gt;就知道按照静态文件来发布&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;source&lt;/span&gt;/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ touch Staticfile  &lt;span class=&quot;comment&quot;&gt;#名字必须是Staticfile&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;分支选择&lt;code&gt;master&lt;/code&gt;，因为前面配置的分支是&lt;code&gt;master&lt;/code&gt;,因此开启之后，也需要是&lt;code&gt;master&lt;/code&gt;，开启后就可以直接访问了，比如我的是&lt;code&gt;dev_tll.coding.me&lt;/code&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;绑定域名&quot;&gt;&lt;a href=&quot;#绑定域名&quot; class=&quot;headerlink&quot; title=&quot;绑定域名&quot;&gt;&lt;/a&gt;绑定域名&lt;/h2&gt;&lt;p&gt;我用的是&lt;code&gt;DNSPod&lt;/code&gt;进行域名解析，需要在域名注册商修改&lt;code&gt;DNS&lt;/code&gt;。我是在&lt;a href=&quot;https://www.namecheap.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;namecheap&lt;/a&gt;上注册的域名，所以下面介绍&lt;code&gt;namecheap&lt;/code&gt; DNS的修改方式。见下图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffjw1f3h7yx1xtkj21kw0s3n1u.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;在&lt;code&gt;Custom DNS&lt;/code&gt;下添加两个&lt;code&gt;DNS&lt;/code&gt;,&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;和&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;，点击保存，然后等待全球递归DNS服务器刷新（最多72小时），接下来需要在&lt;code&gt;DNSPod&lt;/code&gt;添加记录&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffgw1f3h86kxzm4j217a0ia773.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;绑定域名&quot;&gt;&lt;a href=&quot;#绑定域名&quot; class=&quot;headerlink&quot; title=&quot;绑定域名&quot;&gt;&lt;/a&gt;绑定域名&lt;/h2&gt;&lt;p&gt;我用的是DNSPod进行域名解析，需要在域名注册商修改DNS。我是在&lt;a href=&quot;https://www.namecheap.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;namecheap&lt;/a&gt;上注册的域名，所以下面介绍namecheap 的DNS修改方式。见下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffjw1f3h7yx1xtkj21kw0s3n1u.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;在&lt;code&gt;Custom DNS&lt;/code&gt;下添加两个DNS,&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;和&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;，点击保存，然后等待全球递归DNS服务器刷新（最多72小时），接下来需要在DNSPod添加记录&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffgw1f3h86kxzm4j217a0ia773.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;忙活了大半天，到此为止，终于搞定同时在&lt;code&gt;Github&lt;/code&gt;和&lt;code&gt;Coding&lt;/code&gt;上同时部署了。访问速度也是唰唰唰的快。&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;忙活了大半天，到此为止，终于搞定同时在Github和Coding上同时部署了。访问速度也是唰唰唰的快。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;之前只是将博客托管在&lt;code&gt;Github&lt;/code&gt;上，但是天朝访问&lt;code&gt;GitHub Pages&lt;/code&gt;真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用&lt;code&gt;GitCafe&lt;/code&gt;来托管&lt;code&gt;(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )&lt;/code&gt;，因为&lt;code&gt;Hexo&lt;/code&gt;支持多部署，所以可以将博客同时托管到 &lt;code&gt;Github&lt;/code&gt; 和 &lt;code&gt;Coding&lt;/code&gt; 上，国内线路解析到 &lt;code&gt;Coding&lt;/code&gt;，国外线路解析到 &lt;code&gt;Github&lt;/code&gt;&lt;/p&gt;
+      &lt;p&gt;之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管&lt;code&gt;(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )&lt;/code&gt;，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好&lt;code&gt;Coding&lt;/code&gt;帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用&lt;code&gt;Github&lt;/code&gt;已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
+&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用Github已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你&lt;code&gt;Coding&lt;/code&gt;帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你Coding帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh -T git@git.coding.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;如果显示 &lt;code&gt;Hello xxx You&amp;#39;ve connected to Coding.net by SSH successfully!&lt;/code&gt; 则表示配置成功&lt;/p&gt;
 &lt;hr&gt;
