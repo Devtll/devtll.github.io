@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[将Hexo博客同时托管到Github和Coding]]></title>
-      <url>http://devtll.github.io/2016/05/02/multi-deploy/</url>
+      <url>http://www.tuojl.com/2016/05/02/multi-deploy/</url>
       <content type="html"><![CDATA[<p>之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管<code>(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )</code>，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github</p>
 <hr>
 <h2 id="配置-Coding"><a href="#配置-Coding" class="headerlink" title="配置 Coding"></a>配置 Coding</h2><p>注册好Coding帐号后，需要配置下<code>SSH</code>公钥。因为之前使用Github已经将<code>SSH Key</code>生成了，可以直接拿来用。先进入文件目录</p>
@@ -33,7 +33,7 @@
     
     <entry>
       <title><![CDATA[开写之前]]></title>
-      <url>http://devtll.github.io/2016/04/13/before-writing/</url>
+      <url>http://www.tuojl.com/2016/04/13/before-writing/</url>
       <content type="html"><![CDATA[<h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><p>早在2015年初我就搭建了这个博客，当时也毅然决然的要坚持写下去，但是到今天<code>(2016-04-13)</code>已经过去一年了，我的博客里依旧空空如也，一篇文章也没有写。OH MY GOD, 不经要问这一年我都在忙些什么？我试着去总结了下：</p>
 <blockquote>
 <ul>

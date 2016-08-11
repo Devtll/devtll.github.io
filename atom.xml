@@ -4,9 +4,9 @@
   <subtitle>Just Do It</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://devtll.github.io/"/>
+  <link href="http://www.tuojl.com/"/>
   <updated>2016-05-05T14:40:23.000Z</updated>
-  <id>http://devtll.github.io/</id>
+  <id>http://www.tuojl.com/</id>
   
   <author>
     <name>Devtll</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>将Hexo博客同时托管到Github和Coding</title>
-    <link href="http://devtll.github.io/2016/05/02/multi-deploy/"/>
-    <id>http://devtll.github.io/2016/05/02/multi-deploy/</id>
+    <link href="http://www.tuojl.com/2016/05/02/multi-deploy/"/>
+    <id>http://www.tuojl.com/2016/05/02/multi-deploy/</id>
     <published>2016-05-02T08:34:26.000Z</published>
     <updated>2016-05-05T14:40:23.000Z</updated>
     
@@ -59,17 +59,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://devtll.github.io/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://www.tuojl.com/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://devtll.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://www.tuojl.com/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>开写之前</title>
-    <link href="http://devtll.github.io/2016/04/13/before-writing/"/>
-    <id>http://devtll.github.io/2016/04/13/before-writing/</id>
+    <link href="http://www.tuojl.com/2016/04/13/before-writing/"/>
+    <id>http://www.tuojl.com/2016/04/13/before-writing/</id>
     <published>2016-04-13T12:27:30.000Z</published>
     <updated>2016-05-02T08:28:55.000Z</updated>
     
@@ -127,10 +127,10 @@
     
     </summary>
     
-      <category term="Other" scheme="http://devtll.github.io/categories/Other/"/>
+      <category term="Other" scheme="http://www.tuojl.com/categories/Other/"/>
     
     
-      <category term="杂谈" scheme="http://devtll.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="杂谈" scheme="http://www.tuojl.com/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
