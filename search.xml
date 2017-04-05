@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[将Hexo博客同时托管到Github和Coding]]></title>
       <url>http://www.tuojl.com/2016/05/02/multi-deploy/</url>
-      <content type="html"><![CDATA[<p>之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管<code>(现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )</code>，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github</p>
+      <content type="html"><![CDATA[<p>之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github</p>
 <hr>
 <h2 id="配置-Coding"><a href="#配置-Coding" class="headerlink" title="配置 Coding"></a>配置 Coding</h2><p>注册好Coding帐号后，需要配置下<code>SSH</code>公钥。因为之前使用Github已经将<code>SSH Key</code>生成了，可以直接拿来用。先进入文件目录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
