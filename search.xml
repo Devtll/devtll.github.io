@@ -4,40 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[test]]></title>
-      <url>http://www.tuojl.com/2017/03/13/test/</url>
-      <content type="html"><![CDATA[<h2 id="为什么写博客"><a href="#为什么写博客" class="headerlink" title="为什么写博客"></a>为什么写博客</h2><p>早在2015年初我就搭建了这个博客，当时也毅然决然的要坚持写下去，但是到今天<code>(2016-04-13)</code>已经过去一年了，我的博客里依旧空空如也，一篇文章也没有写。OH MY GOD, 不经要问这一年我都在忙些什么？我试着去总结了下：</p>
-<blockquote>
-<ul>
-<li>懒惰  <code>( 这是主要原因 )</code></li>
-<li>无从下笔 <code>( 简单的不愿写，复杂的不会写 )</code></li>
-<li>文笔不好 <code>( 理科生永远的痛 )</code></li>
-<li>工作忙 <code>( 这种情况可以忽略不计，时间就像乳沟，挤挤总会有的 )</code></li>
-</ul>
-</blockquote>
-<p>那我为什么又要开始写博客了呢？我也试着总结了写作的好处：</p>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">View</span>: <span class="title">Equatable</span> </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> subviews: [<span class="type">View</span>] = []</span><br><span class="line">  <span class="keyword">var</span> superView: <span class="type">View</span>?</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">addSubview</span><span class="params">(subview: View)</span></span> &#123;</span><br><span class="line">    subviews.append(subview)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">removeSubview</span><span class="params">(subview: View)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> index = subviews.index(of: subview) &#123;</span><br><span class="line">      subviews.remove(at: index)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">draw</span><span class="params">(<span class="number">_</span> rect: CGRect)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 具体的绘制图形的代码</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Array.index(of:)必须遵循Equatable协议</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> == <span class="params">(lhs: View, rhs: View)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> lhs === rhs</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<ul>
-<li>提高自己对知识的掌握层次 </li>
-<li>提高表达和沟通的能力</li>
-<li>记录你的学习历程</li>
-<li>结识志同道合的新朋友</li>
-<li>面试加分</li>
-<li>…</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<p>项目开发中也许学到了一个技能，或者一个知识点，但是通过写博客会加深巩固自己学习的东西，自己写不出来可能说明你对这个知识点理解还不够深入。</p>
-<p>程序员大都不善于沟通，因为日常的工作大部分时间都是面对电脑。许多人周末也喜欢当一个技术宅，待在家里上网、看电影或者玩游戏来消遣。长时间的面对机器，使得我们的语言表达能力极度衰退。但是通过坚持写博客，自己的表达能力与表达逻辑会慢慢锻炼出来。</p>
-<hr>
-<h2 id="如何坚持写下去"><a href="#如何坚持写下去" class="headerlink" title="如何坚持写下去"></a>如何坚持写下去</h2><p>首先我们并不是作家，所以，你不需要一定擅长写作，只需做到清楚的表达你的观点即可。刚开始我们可以尝试写一些不是那么深入的文章，也不必太过追求完美。写作能力的提高本来就循序渐进的，刚开始写简单一些，总归比不写要好得多，这样也会渐渐培养起我们写作的习惯。</p>
-<hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总之，我们应该博客，并且要坚持写下去。通过写博客提升自己能力，也许有一天你会突然发现，原来自己已经走了这么远！</p>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[将Hexo博客同时托管到Github和Coding]]></title>
       <url>http://www.tuojl.com/2016/05/02/multi-deploy/</url>
       <content type="html"><![CDATA[<p>之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github</p>
