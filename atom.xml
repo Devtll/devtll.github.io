@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.tuojl.com/"/>
-  <updated>2017-04-05T07:22:22.000Z</updated>
+  <updated>2017-04-07T02:07:57.000Z</updated>
   <id>http://www.tuojl.com/</id>
   
   <author>
@@ -16,15 +16,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>将Hexo博客同时托管到Github和Coding</title>
+    <title>将Hexo博客同时托管到GitHub和Coding</title>
     <link href="http://www.tuojl.com/2016/05/02/multi-deploy/"/>
     <id>http://www.tuojl.com/2016/05/02/multi-deploy/</id>
     <published>2016-05-02T08:34:26.000Z</published>
-    <updated>2017-04-05T07:22:22.000Z</updated>
+    <updated>2017-04-07T02:07:57.000Z</updated>
     
-    <content type="html">&lt;p&gt;之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github&lt;/p&gt;
+    <content type="html">&lt;p&gt;之前只是将博客托管在GitHub上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 GitHub 和 Coding 上，国内线路解析到 Coding，国外线路解析到 GitHub&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用Github已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
+&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用GitHub已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你Coding帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh -T git@git.coding.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -43,14 +43,14 @@
 &lt;h2 id=&quot;绑定域名&quot;&gt;&lt;a href=&quot;#绑定域名&quot; class=&quot;headerlink&quot; title=&quot;绑定域名&quot;&gt;&lt;/a&gt;绑定域名&lt;/h2&gt;&lt;p&gt;我用的是DNSPod进行域名解析，需要在域名注册商修改DNS。我是在&lt;a href=&quot;https://www.namecheap.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;namecheap&lt;/a&gt;上注册的域名，所以下面介绍namecheap 的DNS修改方式。见下图：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffjw1f3h7yx1xtkj21kw0s3n1u.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;在&lt;code&gt;Custom DNS&lt;/code&gt;下添加两个DNS,&lt;code&gt;f1g1ns1.dnspod.net&lt;/code&gt;和&lt;code&gt;f1g1ns2.dnspod.net&lt;/code&gt;，点击保存，然后等待全球递归DNS服务器刷新（最多72小时），接下来需要在DNSPod添加记录&lt;br&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/70c2f1ffgw1f3h86kxzm4j217a0ia773.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;忙活了大半天，到此为止，终于搞定同时在Github和Coding上同时部署了。访问速度也是唰唰唰的快。&lt;/p&gt;
+&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;忙活了大半天，到此为止，终于搞定同时在GitHub和Coding上同时部署了。访问速度也是唰唰唰的快。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;之前只是将博客托管在Github上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 Github 和 Coding 上，国内线路解析到 Coding，国外线路解析到 Github&lt;/p&gt;
+      &lt;p&gt;之前只是将博客托管在GitHub上，但是天朝访问GitHub Pages真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用GitCafe来托管（现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding )，因为Hexo 支持多部署，所以可以将博客同时托管到 GitHub 和 Coding 上，国内线路解析到 Coding，国外线路解析到 GitHub&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用Github已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
+&lt;h2 id=&quot;配置-Coding&quot;&gt;&lt;a href=&quot;#配置-Coding&quot; class=&quot;headerlink&quot; title=&quot;配置 Coding&quot;&gt;&lt;/a&gt;配置 Coding&lt;/h2&gt;&lt;p&gt;注册好Coding帐号后，需要配置下&lt;code&gt;SSH&lt;/code&gt;公钥。因为之前使用GitHub已经将&lt;code&gt;SSH Key&lt;/code&gt;生成了，可以直接拿来用。先进入文件目录&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;将&lt;code&gt;id_rsa.pub&lt;/code&gt;里的内容全部复制并添加到你Coding帐号下的&lt;code&gt;SSH&lt;/code&gt;公钥这个选项里，继续使用下面的命令来测试是否添加成功&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh -T git@git.coding.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
