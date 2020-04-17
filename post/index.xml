@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Even</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Even</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>devtll</copyright>
+    <lastBuildDate>Mon, 02 May 2016 16:34:26 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>将Hexo博客同时托管到Github和Coding</title>
+      <link>/post/multi-deploy/</link>
+      <pubDate>Mon, 02 May 2016 16:34:26 +0000</pubDate>
+      
+      <guid>/post/multi-deploy/</guid>
+      <description>之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可</description>
+    </item>
+    
+    <item>
+      <title>开写之前</title>
+      <link>/post/before-writing/</link>
+      <pubDate>Wed, 13 Apr 2016 20:27:30 +0000</pubDate>
+      
+      <guid>/post/before-writing/</guid>
+      <description>为什么写博客 早在2015年初我就搭建了这个博客，当时也毅然决然的要坚持写下去，但是到今天 (2016-04-13) 已经过去一年了，我的博客里依旧空空如也，一篇文章也</description>
+    </item>
+    
+  </channel>
+</rss>

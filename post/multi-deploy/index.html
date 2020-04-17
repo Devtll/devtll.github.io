@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>将Hexo博客同时托管到Github和Coding - Even</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="devtll" /><meta name="description" content="之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可" /><meta name="keywords" content="JS, React, iOS" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="/post/multi-deploy/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.37fb0492c450f69df484f47ee165e0ad5c1c5092fdb23ac946c9e8c897eae67e.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="将Hexo博客同时托管到Github和Coding" />
+<meta property="og:description" content="之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/multi-deploy/" />
+<meta property="article:published_time" content="2016-05-02T16:34:26+00:00" />
+<meta property="article:modified_time" content="2016-05-02T16:34:26+00:00" />
+<meta itemprop="name" content="将Hexo博客同时托管到Github和Coding">
+<meta itemprop="description" content="之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可">
+<meta itemprop="datePublished" content="2016-05-02T16:34:26&#43;00:00" />
+<meta itemprop="dateModified" content="2016-05-02T16:34:26&#43;00:00" />
+<meta itemprop="wordCount" content="746">
+
+
+
+<meta itemprop="keywords" content="Hexo," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="将Hexo博客同时托管到Github和Coding"/>
+<meta name="twitter:description" content="之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">将Hexo博客同时托管到Github和Coding</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-05-02 </span>
+        <div class="post-category">
+            <a href="/categories/hexo/"> Hexo </a>
+            </div>
+          <span class="more-meta"> 746 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-coding">配置 Coding</a></li>
+    <li><a href="#heading">创建项目和配置</a></li>
+    <li><a href="#coding-pages">开启Coding Pages服务</a></li>
+    <li><a href="#heading-1">绑定域名</a></li>
+    <li><a href="#heading-2">总结</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可直接托管到 Coding ) ，因为 Hexo 支持多部署，所以可以将博客同时托管到  Github  和    Coding 上，国内线路解析到  Coding ，国外线路解析到 Github</p>
+<h2 id="-coding">配置 Coding</h2>
+<p>注册好 Coding 帐号后，需要配置下 <code>SSH</code> 公钥。因为之前使用 Github 已经将 <code>SSH Key</code> 生成了，可以直接拿来用。先进入文件目录</p>
+<pre><code class="language-bash">$ cd ~/.ssh 
+</code></pre>
+<p>将 <code>id_rsa.pub</code> 里的内容全部复制并添加到你 Coding 帐号下的 <code>SSH</code> 公钥这个选项里，继续使用下面的命令来测试是否添加成功</p>
+<pre><code class="language-bash">$ ssh -T git@git.coding.net
+</code></pre>
+<p>如果显示  <code>Hello xxx You've connected to Coding.net by SSH successfully! </code>  则表示配置成功</p>
+<h2 id="heading">创建项目和配置</h2>
+<p>创建项目时唯一要注意的就是项目名称一定要和你的用户名一样并且项目选择公开，创建成功后接下来就要修改博客根目录下面的 <code>_config.yml</code>  文件。下面是我的配置</p>
+<pre><code class="language-YAML"># Deployment
+# Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  branch: master
+  repository: 
+    github: git@github.com:Devtll/devtll.github.io.git
+    coding: git@git.coding.net:dev_tll/dev_tll.git
+</code></pre>
+<p>最后使用命令把博客同步到 Coding 上面：</p>
+<pre><code class="language-bash">$ hexo clean;hexo g;hexo d
+</code></pre>
+<h2 id="coding-pages">开启Coding Pages服务</h2>
+<p>部署博客方式有两种，第一种就是 Pages 服务的方式，也推荐这种方式，因为可以绑定域名，而第二种演示的方式必须升级会员才能绑定自定义域名。 Pages 方式也很简单
+就是在博客根目录 source/ 需要创建一个空白文件，至于原因，是因为 coding.net 需要这个文件来作为以静态文件部署的标志。就是说看到这个 Staticfile  就知道按照静态文件来发布</p>
+<pre><code class="language-bash">$ cd source/
+$ touch Staticfile  #名字必须是Staticfile
+</code></pre>
+<p>分支选择 <code>master</code> ，因为前面配置的分支是 <code>master</code> ,因此开启之后，也需要是 <code>master</code> ，开启后就可以直接访问了，比如我的是 dev_tll.coding.me</p>
+<h2 id="heading-1">绑定域名</h2>
+<p>我用的是 DNSPod 进行域名解析，需要在域名注册商修改 DNS。我是在<a href="https://www.namecheap.com/">namecheap</a>上注册的域名，所以下面介绍 namecheap 的 DNS 修改方式。见下图：</p>
+<!-- raw HTML omitted -->
+<p><img src="../../img/namecheap.jpg" alt="WAIT_AFTER_SYNC"></p>
+<!-- raw HTML omitted -->
+<p>在 Custom DNS 下添加两个 DNS , <code>f1g1ns1.dnspod.net</code> 和  <code>f1g1ns2.dnspod.net</code> ，点击保存，然后等待全球递归 DNS 服务器刷新（最多72小时），接下来需要在 DNSPod 添加记录</p>
+<!-- raw HTML omitted -->
+<p><img src="../../img/DNSPod.jpg" alt="WAIT_AFTER_SYNC"></p>
+<!-- raw HTML omitted -->
+<h2 id="heading-2">总结</h2>
+<p>忙活了大半天，到此为止，终于搞定同时在 Github 和 Coding 上同时部署了。访问速度也是唰唰唰的快。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">devtll</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2016-05-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hexo/">Hexo</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/before-writing/">
+            <span class="next-text nav-default">开写之前</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'tuojl';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:tuojl1104@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com" class="iconfont icon-github" title="github"></a>
+  <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2016 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">devtll</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.4d21c1cefdf1cd0b77ef59bab2d1bbe3112fc9d6cc04710bb1f0b1fd7b891f11.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

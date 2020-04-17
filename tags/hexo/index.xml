@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hexo on Even</title>
+    <link>/tags/hexo/</link>
+    <description>Recent content in Hexo on Even</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>devtll</copyright>
+    <lastBuildDate>Mon, 02 May 2016 16:34:26 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>将Hexo博客同时托管到Github和Coding</title>
+      <link>/post/multi-deploy/</link>
+      <pubDate>Mon, 02 May 2016 16:34:26 +0000</pubDate>
+      
+      <guid>/post/multi-deploy/</guid>
+      <description>之前只是将博客托管在 Github 上，但是天朝访问 GitHub Pages 真心很慢，有时候还不能访问，所以继续折腾一下吧。国内的话可以使用 GitCafe 来托管 (现在 GitCafe 已经被 Coding 收购了，可</description>
+    </item>
+    
+  </channel>
+</rss>
